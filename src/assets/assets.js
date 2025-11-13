@@ -721,3 +721,6 @@ export const products = [
     }
 
 ]
+export const Latest = products.filter(item => item.bestseller);
+export const Collection = products.filter(item => !item.bestseller);
+
