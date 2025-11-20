@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { ShopContext } from '../context/ShopContext';
 import { assets } from '../assets/assets';
 import RelatedProduct from '../components/RelatedProduct';
+import toast from "react-hot-toast"
 
 const Product = () => {
   const { productId } = useParams();
@@ -100,7 +101,7 @@ const Product = () => {
           <button
             onClick={() => {
               if (!size) {
-                alert("Please select a size");
+                toast.error("Please select a size");
                 return;
               }
               addToCart(productData._id, size);
