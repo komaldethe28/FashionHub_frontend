@@ -4,10 +4,11 @@ import Title from '../components/Title';
 // import assets from '../assets/assets';
 import { assets } from '../assets/assets';
 import CarTotal from '../components/CarTotal';
+import PlaceOrder from './PlaceOrder';
 
 const Cart = () => {
 
-  const { products, currency, cartItem, updateQuantity } = useContext(ShopContext);
+  const { products, currency, cartItem, updateQuantity, navigate } = useContext(ShopContext);
 
   const [cartData, setCartData] = useState([]);
 
@@ -94,7 +95,12 @@ const Cart = () => {
       </div>
       <div className='flex justify-end my-20'>
         <div className='w-full sm:w-[450px]'>
-          <CarTotal/>
+          <CarTotal />
+
+          <div className='w-full text-end'>
+            <button onClick={()=> navigate('/place-order')} className='bg-black text-white text-sm my-8 py-3'>Proceed to Checkout</button>
+
+          </div>
         </div>
       </div>
     </div>
