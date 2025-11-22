@@ -24,8 +24,8 @@ const Order = () => {
                     <p className='text-lg'>{currency}{item.price}</p>
                     <p>Quantity:1</p>
                     <p>Size:M</p>
-                  </div>  
-                  <p>Date: <span className='text-gray-400'>25 July 2025</span></p>             
+                  </div>
+                  <p>Date: <span className='text-gray-400'>25 July 2025</span></p>
                 </div>
               </div>
               <div className='md:w-1/2 flex justify-between'>
