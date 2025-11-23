@@ -17,7 +17,7 @@ const Contact = () => {
           <p className='font-semibold text-xl text-gray-600'>Our Store</p>
           <p className='text-gray-500'>address: 1548 steat Lorem ipsum dolor sit amet,<br /> adipisicing elit. Dolore, earum.</p>
 
-          <p className='text-gray-500'>Tel: (+91) 89404 03333<br />FashionHub@gmail.com</p>
+          <p className='text-gray-500'>Tel: (+91) 11110 03333<br />FashionHub@gmail.com</p>
 
           <p className='font-semibold text-xl text-gray-600'>@ Komal Dethe</p>
         </div>
