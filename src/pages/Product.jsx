@@ -18,7 +18,7 @@ const Product = () => {
       const found = products.find((item) => item._id === productId);
       if (found) {
         setProductData(found);
-        setImage(found.image[0]);
+        setImage(found.images[0]);
       }
     }
   }, [productId, products]);
@@ -36,7 +36,7 @@ const Product = () => {
 
           {/* Thumbnail images */}
           <div className="flex sm:flex-col gap-3 overflow-x-auto sm:overflow-y-auto p-1 sm:w-[150px] w-full">
-            {productData.image?.map((img) => (
+            {productData.images?.map((img) => (
               <img
                 key={img}
                 src={img}
