@@ -13,23 +13,24 @@ const Cart = () => {
   const [cartData, setCartData] = useState([]);
 
   useEffect(() => {
-    const tempData = [];
 
-    for (const productId in cartItem) {
-      for (const size in cartItem[productId]) {
-        if (cartItem[productId][size] > 0) {
-          tempData.push({
-            _id: productId,
-            size: size,
-            quantity: cartItem[productId][size]
-          });
+    if (products.length > 0) {
+      const tempData = [];
+      for (const productId in cartItem) {
+        for (const size in cartItem[productId]) {
+          if (cartItem[productId][size] > 0) {
+            tempData.push({
+              _id: productId,
+              size: size,
+              quantity: cartItem[productId][size]
+            });
+          }
         }
       }
+
+      setCartData(tempData);
     }
-
-    setCartData(tempData);
-
-  }, [cartItem]);
+  }, [cartItem, products]);
 
   return (
     <div className='border-t pt-14'>
@@ -98,7 +99,7 @@ const Cart = () => {
           <CarTotal />
 
           <div className='w-full text-end'>
-            <button onClick={()=> navigate('/place-order')} className='bg-black text-white text-sm my-8 py-3'>Proceed to Checkout</button>
+            <button onClick={() => navigate('/place-order')} className='bg-black text-white text-sm my-8 py-3'>Proceed to Checkout</button>
 
           </div>
         </div>

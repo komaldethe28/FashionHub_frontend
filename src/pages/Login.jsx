@@ -1,14 +1,14 @@
 import { useState, useEffect, useContext } from 'react'
 import axios from 'axios'
 import { ShopContext } from '../context/ShopContext'
-import { toast } from 'react-toastify';
+import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [currentState, setCurrentState] = useState('Login');
-  const { token, setToken, backend_url } = useContext(ShopContext)
+  const { token, setToken,navigate, backend_url } = useContext(ShopContext)
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
