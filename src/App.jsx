@@ -9,12 +9,15 @@ import Login from './pages/Login'
 import Order from './pages/Order'
 import PlaceOrder from './pages/PlaceOrder'
 import Product from './pages/Product'
+import OrderSuccess from './pages/OrderSuccess'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import SearchBar from './context/SearchBar'
-
+import Verify from './pages/Verify'
 import { Toaster } from "react-hot-toast";
-  
+
+export const backend_url = import.meta.env.VITE_BACKEND_URL;  
+
 const App = () => {
   return (
     <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
@@ -30,7 +33,9 @@ const App = () => {
         <Route path='/login' element={<Login/>}/>
         <Route path='/orders' element={<Order/>}/>
         <Route path='/place-order' element={<PlaceOrder/>}/>
+        <Route path='/order-success' element={<OrderSuccess/>}/>
         <Route path='/product/:productId' element={<Product/>}/>
+        <Route path='/verify' element={<Verify/>}/>
       </Routes>
       <Footer/>
     </div>
