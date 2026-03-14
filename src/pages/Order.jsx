@@ -71,7 +71,21 @@ const Order = () => {
               </div>
               <div className='md:w-1/2 flex justify-between'>
                 <div className='flex items-center gap-2'>
-                  <p className={`min-w-2 h-2 rounded-full ${item.status === 'Order Placed' ? 'bg-green-500' : item.status === 'Shipped' ? 'bg-blue-500' : 'bg-orange-500'}`}></p>
+                  <p
+                    className={`min-w-2 h-2 rounded-full ${
+                      item.status === 'Order Placed'
+                        ? 'bg-green-500'
+                        : item.status === 'Packing'
+                        ? 'bg-yellow-500'
+                        : item.status === 'Shipped'
+                        ? 'bg-blue-500'
+                        : item.status === 'Out for Delivery' || item.status === 'Out for delivery'
+                        ? 'bg-indigo-500'
+                        : item.status === 'Delivered'
+                        ? 'bg-green-700'
+                        : 'bg-gray-300'
+                    }`}
+                  ></p>
 
                   <p className='text-sm md:text-base'>{item.status}</p>
                 </div>
